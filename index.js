@@ -7,20 +7,14 @@ String.prototype.reverse = function() {
 
 // Defines a Phrase object.
 function Phrase(content) {
+
   this.content = content;
 
   // Returns the letters in the content.
   // For example:
   //   new Phrase("Hello, world!").letters() === "Helloworld"
   this.letters = function letters() {
-    const letterRegex = /[a-z]/i;
-    let theLetters = [];
-    Array.from(this.content).forEach(function(character) {
-      if (character.match(letterRegex)) {
-        theLetters.push(character);
-      }
-    });
-    return theLetters.join("");
+    return (this.content.match(/[a-z]/gi) || []).join("");
   }
 
   // Returns content processed for palindrome testing.
