@@ -33,9 +33,9 @@ describe("Phrase", function() {
       assert.strictEqual(punctuatedPalindrome.letters(), "MadamImAdam");
     });
 
-    it("should return empty string for an empty string", function() {
-      let emptyString = new Phrase("").letters();
-      assert.strictEqual(emptyString, "");
+    it("should return the empty string on no match", function() {
+      let noLetters = new Phrase("1234.56");
+      assert.strictEqual(noLetters.letters(), "");
     });
   });
 });
