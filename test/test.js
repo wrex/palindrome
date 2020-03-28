@@ -32,5 +32,10 @@ describe("Phrase", function() {
       let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
       assert.strictEqual(punctuatedPalindrome.letters(), "MadamImAdam");
     });
+
+    it("should return empty string for an empty string", function() {
+      let emptyString = new Phrase("").letters();
+      assert.strictEqual(emptyString, "");
+    });
   });
 });
